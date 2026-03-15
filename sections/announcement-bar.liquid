@@ -1,0 +1,16 @@
+{% if section.settings.show_bar %}
+<div style="background:{{ section.settings.bg }};color:{{ section.settings.text_color }};padding:10px 0;text-align:center;font-size:14px;">
+  <div class="page-width">{{ section.settings.text }}</div>
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {"type":"checkbox","id":"show_bar","label":"Hiển thị", "default": true},
+    {"type":"text","id":"text","label":"Nội dung", "default":"✨ Miễn phí tư vấn thiết kế POD theo ảnh thật trong 24h"},
+    {"type":"color","id":"bg","label":"Màu nền", "default":"#2b1f45"},
+    {"type":"color","id":"text_color","label":"Màu chữ", "default":"#ffffff"}
+  ]
+}
+{% endschema %}

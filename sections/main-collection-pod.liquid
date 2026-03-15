@@ -1,0 +1,29 @@
+<section class="section">
+  <div class="page-width">
+    <div class="h-row" style="margin-bottom:14px;">
+      <div><h1 style="margin:0;">{{ collection.title }}</h1><p class="note">{{ collection.description | strip_html | truncate: 120 }}</p></div>
+      <div class="h-row">
+        <select><option>Sắp xếp: Mới nhất</option><option>Giá tăng dần</option><option>Giá giảm dần</option></select>
+      </div>
+    </div>
+    <div class="grid grid--3">
+      {% for product in collection.products %}
+      <article class="card">
+        <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+        <p class="note">{{ product.description | strip_html | truncate: 95 }}</p>
+        <p><strong>{{ product.price | money }}</strong></p>
+        <a class="button button--secondary" href="{{ product.url }}">Tuỳ chỉnh ngay</a>
+      </article>
+      {% else %}
+      <div class="card">Chưa có sản phẩm trong bộ sưu tập này.</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name":"Main collection POD",
+  "settings":[],
+  "presets":[{"name":"Main collection POD"}]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+<footer class="section" style="background:#201a2f;color:#fff;">
+  <div class="page-width grid grid--3">
+    <div>
+      <h3>{{ section.settings.brand_name }}</h3>
+      <p>{{ section.settings.brand_desc }}</p>
+      <p class="note" style="color:#c7c2d8;">{{ section.settings.localization_note }}</p>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <p>{{ section.settings.contact_text }}</p>
+      <a class="button button--secondary" href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+    </div>
+    <div>
+      <h4>{{ section.settings.newsletter_heading }}</h4>
+      <p>{{ section.settings.newsletter_text }}</p>
+      <form>
+        <input type="email" placeholder="Email của bạn" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:10px;">
+        <button class="button button--primary" type="button">{{ section.settings.newsletter_button }}</button>
+      </form>
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name":"Footer",
+  "settings":[
+    {"type":"text","id":"brand_name","label":"Tên thương hiệu","default":"LụaMây Studio"},
+    {"type":"textarea","id":"brand_desc","label":"Mô tả thương hiệu","default":"Nền tảng trung gian POD cá nhân hoá từ ảnh thật, kết nối bạn với đối tác sản xuất phù hợp."},
+    {"type":"text","id":"localization_note","label":"Ghi chú quốc tế hoá","default":"Sẵn sàng mở rộng đa ngôn ngữ và đa quốc gia trong giai đoạn tiếp theo."},
+    {"type":"textarea","id":"contact_text","label":"Thông tin hỗ trợ","default":"Tư vấn đơn cá nhân hoá: 08xx xxx xxx\nZalo: @luamay"},
+    {"type":"text","id":"email","label":"Email","default":"support@luamay.demo"},
+    {"type":"text","id":"newsletter_heading","label":"Tiêu đề newsletter","default":"Nhận ưu đãi & ý tưởng mới"},
+    {"type":"text","id":"newsletter_text","label":"Mô tả newsletter","default":"Đăng ký để nhận bộ sưu tập thiết kế theo mùa và ưu đãi đặt sớm."},
+    {"type":"text","id":"newsletter_button","label":"Nút newsletter","default":"Đăng ký"}
+  ]
+}
+{% endschema %}

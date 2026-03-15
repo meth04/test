@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {"type":"header","content":"Màu giao diện"},
+      {"type":"color","id":"brand_bg","label":"Màu nền chính","default":"#fffaf8"},
+      {"type":"color","id":"brand_accent","label":"Màu nhấn","default":"#7a4cff"},
+      {"type":"header","content":"Bản địa hoá"},
+      {"type":"text","id":"default_locale_label","label":"Nhãn ngôn ngữ mặc định","default":"VN | Tiếng Việt"},
+      {"type":"textarea","id":"localization_admin_note","label":"Ghi chú cho admin","default":"Chuẩn bị sẵn vị trí selector ngôn ngữ/quốc gia ở header. Dùng Shopify Markets + Translate & Adapt để mở rộng."},
+      {"type":"header","content":"AI & chatbot readiness"},
+      {"type":"textarea","id":"ai_readiness_note","label":"Ghi chú tích hợp AI","default":"Đã có UI placeholder cho chatbot và mockup AI. Cần app/backend để xử lý ảnh và tạo preview thật."}
+    ]
+  }
+]
