@@ -18,9 +18,29 @@
     <div class="grid grid--4">
       {% for block in section.blocks %}
         {% if block.type == 'category' %}
+          <article class="card" {{ block.shopify_attributes }}>
           <article class="card">
             <h3>{{ block.settings.title }}</h3>
             <p class="note">{{ block.settings.text }}</p>
+            <a class="button button--secondary" href="{{ block.settings.link }}">{{ block.settings.cta }}</a>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="page-width">
+    <div class="section-head"><h2>{{ section.settings.sample_products_heading }}</h2><p>{{ section.settings.sample_products_text }}</p></div>
+    <div class="grid grid--3">
+      {% for block in section.blocks %}
+        {% if block.type == 'sample_product' %}
+          <article class="card" {{ block.shopify_attributes }}>
+            <div class="badge">{{ block.settings.category }}</div>
+            <h3 style="margin:10px 0 6px;">{{ block.settings.title }}</h3>
+            <p class="note">{{ block.settings.text }}</p>
+            <p><strong>{{ block.settings.price }}</strong></p>
             <a class="button button--secondary" href="{{ block.settings.link }}">{{ block.settings.cta }}</a>
           </article>
         {% endif %}
@@ -74,6 +94,7 @@
     <h2>{{ section.settings.faq_heading }}</h2>
     <p><strong>Q:</strong> Tôi có thể dùng ảnh tự chụp không? <br><strong>A:</strong> Có, bạn có thể tải ảnh trong trang sản phẩm và mô tả yêu cầu.</p>
     <p><strong>Q:</strong> Bao lâu nhận phản hồi khả thi? <br><strong>A:</strong> Thường trong 4-24 giờ làm việc.</p>
+    <p><strong>Q:</strong> Có chatbot AI chưa? <br><strong>A:</strong> Đã có chatbot demo if/else để test trải nghiệm, có thể nâng cấp lên app AI thật ở giai đoạn sau.</p>
     <p><strong>Q:</strong> Có chatbot AI chưa? <br><strong>A:</strong> Vị trí đã sẵn sàng, sẽ tích hợp app chatbot ở giai đoạn tiếp theo.</p>
   </div>
 </section>
@@ -90,6 +111,8 @@
     {"type":"url","id":"hero_cta_secondary_link","label":"Link CTA phụ"},
     {"type":"text","id":"categories_heading","label":"Tiêu đề danh mục","default":"Danh mục cá nhân hoá nổi bật"},
     {"type":"textarea","id":"categories_text","label":"Mô tả danh mục","default":"Mở rộng linh hoạt nhiều loại sản phẩm theo mùa và nhu cầu thị trường."},
+    {"type":"text","id":"sample_products_heading","label":"Tiêu đề sản phẩm mẫu","default":"Sản phẩm mẫu dễ bán"},
+    {"type":"textarea","id":"sample_products_text","label":"Mô tả sản phẩm mẫu","default":"Các mẫu gợi ý để merchant có thể demo nhanh trước khi nhập catalog thực tế."},
     {"type":"text","id":"process_heading","label":"Tiêu đề quy trình","default":"Quy trình đặt hàng minh bạch"},
     {"type":"textarea","id":"process_text","label":"Mô tả quy trình","default":"Mô hình trung gian giúp tối ưu chất lượng và năng lực sản xuất theo từng yêu cầu."},
     {"type":"text","id":"trust_1_title","label":"Trust 1 title","default":"Đối tác sản xuất đã tuyển chọn"},
@@ -112,6 +135,35 @@
         {"type":"text","id":"cta","label":"Nút","default":"Xem sản phẩm"},
         {"type":"url","id":"link","label":"Link"}
       ]
+    },
+    {
+      "type":"sample_product",
+      "name":"Sample product",
+      "settings":[
+        {"type":"text","id":"category","label":"Danh mục","default":"Best seller"},
+        {"type":"text","id":"title","label":"Tên sản phẩm mẫu","default":"Áo thun in ảnh pet"},
+        {"type":"textarea","id":"text","label":"Mô tả ngắn","default":"In chân dung thú cưng với tone màu nhẹ, phù hợp quà tặng sinh nhật."},
+        {"type":"text","id":"price","label":"Giá tham khảo","default":"Từ 289.000₫"},
+        {"type":"text","id":"cta","label":"Nút","default":"Gửi yêu cầu ngay"},
+        {"type":"url","id":"link","label":"Link"}
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets":[
+    {
+      "name":"Home POD demo",
+      "blocks":[
+        {"type":"category"},
+        {"type":"category"},
+        {"type":"category"},
+        {"type":"category"},
+        {"type":"sample_product"},
+        {"type":"sample_product"},
+        {"type":"sample_product"}
+      ]
+    }
+  ]
     }
   ],
   "max_blocks": 8,

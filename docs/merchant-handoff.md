@@ -18,6 +18,7 @@ Trang chủ (`home-pod`) đã gồm:
 5. Inspiration gallery placeholder
 6. AI image/mockup placeholder states
 7. FAQ preview
+8. Sản phẩm mẫu để demo nhanh (không phụ thuộc catalog thật)
 
 ## 3) Trang sản phẩm POD
 `main-product-pod` hỗ trợ luồng yêu cầu cá nhân hoá:
@@ -51,6 +52,10 @@ Trang chủ (`home-pod`) đã gồm:
 - Nội dung tổ chức theo section setting để dịch dễ hơn, hạn chế hardcode
 
 ## 7) AI chatbot readiness đã chuẩn bị
+- Section `chatbot-entry` nay có **chatbot demo if/else** chạy trực tiếp bằng JavaScript để test UX ngay
+- Bộ từ khoá test: `giá`, `thời gian`, `upload`, `liên hệ`, `ai/chatbot`
+- Bố cục mobile tránh đè CTA mua hàng bằng cách dùng vị trí và khoảng đệm
+- Có thể thay bằng app embed chatbot thật ở giai đoạn production
 - Section `chatbot-entry` (floating teaser) tạo sẵn vùng cho app embed/chat launcher
 - Bố cục mobile tránh đè CTA mua hàng bằng cách dùng vị trí và khoảng đệm
 - Có CTA hỗ trợ để nối vào live chat/manual support trước khi có AI bot
@@ -74,6 +79,9 @@ UI/UX đã có placeholder cho các trạng thái:
 - UI/UX storefront
 - Form thu thập yêu cầu custom ở product page
 - Timeline/FAQ/trust messaging
+- Chatbot demo if/else để test hội thoại cơ bản
+- Block sản phẩm mẫu cho homepage để demo nhanh
+- Placeholder AI mockup states
 - Placeholder chatbot + AI mockup states
 - Cấu trúc section setting để merchant tự quản trị
 
