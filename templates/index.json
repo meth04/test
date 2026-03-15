@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "main": {
+      "type": "home-pod",
+      "blocks": {
+        "cat-1": {
+          "type": "category",
+          "settings": {
+            "title": "Áo thun in ảnh",
+            "text": "Quà tặng cá nhân hoá theo ảnh thật.",
+            "cta": "Khám phá"
+          }
+        },
+        "cat-2": {
+          "type": "category",
+          "settings": {
+            "title": "Canvas & poster",
+            "text": "In tranh kỷ niệm cho không gian sống.",
+            "cta": "Xem mẫu"
+          }
+        },
+        "cat-3": {
+          "type": "category",
+          "settings": {
+            "title": "Ly/bình cá nhân hoá",
+            "text": "Món quà tinh tế, dễ chốt đơn theo mùa.",
+            "cta": "Xem sản phẩm"
+          }
+        },
+        "cat-4": {
+          "type": "category",
+          "settings": {
+            "title": "Phụ kiện văn phòng",
+            "text": "Sổ, pad chuột, quà corporate theo bộ nhận diện.",
+            "cta": "Tư vấn"
+          }
+        },
+        "sample-1": {
+          "type": "sample_product",
+          "settings": {
+            "category": "Best seller",
+            "title": "Áo thun in ảnh gia đình",
+            "text": "Form unisex, in ảnh kỷ niệm độ nét cao, phù hợp quà tặng dịp lễ.",
+            "price": "Từ 279.000₫",
+            "cta": "Tuỳ chỉnh mẫu này"
+          }
+        },
+        "sample-2": {
+          "type": "sample_product",
+          "settings": {
+            "category": "Quà tặng doanh nghiệp",
+            "title": "Ly sứ in logo + chân dung",
+            "text": "Combo quà onboarding cho nhân sự mới, có thể đồng bộ bộ nhận diện thương hiệu.",
+            "price": "Từ 159.000₫",
+            "cta": "Nhận báo giá nhanh"
+          }
+        },
+        "sample-3": {
+          "type": "sample_product",
+          "settings": {
+            "category": "Trang trí nhà",
+            "title": "Canvas in ảnh cưới tối giản",
+            "text": "Tone màu thanh lịch, thiết kế tinh chỉnh theo không gian nội thất.",
+            "price": "Từ 399.000₫",
+            "cta": "Xem quy trình"
+          }
+        }
+      },
+      "block_order": [
+        "cat-1",
+        "cat-2",
+        "cat-3",
+        "cat-4",
+        "sample-1",
+        "sample-2",
+        "sample-3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,7 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="720" height="520" rx="28" fill="#FFF7F1"/>
+<path d="M222 156L284 122H436L498 156L548 220L504 258L466 212V420H254V212L216 258L172 220L222 156Z" fill="#FFFFFF" stroke="#E6D7D0" stroke-width="8"/>
+<circle cx="360" cy="258" r="72" fill="#FFD9C8"/>
+<text x="303" y="266" fill="#A2522F" font-size="24" font-family="Arial" font-weight="700">PET</text>
+<text x="292" y="298" fill="#A2522F" font-size="24" font-family="Arial" font-weight="700">LOVE</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="760" rx="32" fill="#F5F0FF"/>
+<circle cx="950" cy="160" r="120" fill="#D8C7FF"/>
+<circle cx="1060" cy="580" r="90" fill="#E9DFFF"/>
+<rect x="120" y="120" width="520" height="520" rx="28" fill="white"/>
+<rect x="170" y="180" width="420" height="260" rx="20" fill="#EEE6FF"/>
+<rect x="170" y="470" width="280" height="24" rx="12" fill="#D8C7FF"/>
+<rect x="170" y="512" width="360" height="24" rx="12" fill="#E6DBFF"/>
+<rect x="680" y="200" width="380" height="420" rx="28" fill="white"/>
+<rect x="730" y="250" width="280" height="200" rx="18" fill="#F3EEFF"/>
+<path d="M740 430C795 372 856 372 905 430C951 485 1012 485 1040 430V525H740V430Z" fill="#CAB5FF"/>
+<rect x="730" y="548" width="220" height="18" rx="9" fill="#D9C8FF"/>
+<text x="750" y="305" fill="#6B44E2" font-size="34" font-family="Arial, sans-serif" font-weight="700">LụaMây</text>
+<text x="750" y="342" fill="#7E6AAE" font-size="24" font-family="Arial, sans-serif">POD Demo</text>
+</svg>
