@@ -56,6 +56,9 @@ Trang chủ (`home-pod`) đã gồm:
 - Bộ từ khoá test: `giá`, `thời gian`, `upload`, `liên hệ`, `ai/chatbot`
 - Bố cục mobile tránh đè CTA mua hàng bằng cách dùng vị trí và khoảng đệm
 - Có thể thay bằng app embed chatbot thật ở giai đoạn production
+- Section `chatbot-entry` (floating teaser) tạo sẵn vùng cho app embed/chat launcher
+- Bố cục mobile tránh đè CTA mua hàng bằng cách dùng vị trí và khoảng đệm
+- Có CTA hỗ trợ để nối vào live chat/manual support trước khi có AI bot
 
 ## 8) AI image/mockup readiness đã chuẩn bị
 UI/UX đã có placeholder cho các trạng thái:
@@ -79,6 +82,7 @@ UI/UX đã có placeholder cho các trạng thái:
 - Chatbot demo if/else để test hội thoại cơ bản
 - Block sản phẩm mẫu cho homepage để demo nhanh
 - Placeholder AI mockup states
+- Placeholder chatbot + AI mockup states
 - Cấu trúc section setting để merchant tự quản trị
 
 ### Cần app/backend (chưa làm, bắt buộc cho production)

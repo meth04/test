@@ -19,6 +19,7 @@
       {% for block in section.blocks %}
         {% if block.type == 'category' %}
           <article class="card" {{ block.shopify_attributes }}>
+          <article class="card">
             <h3>{{ block.settings.title }}</h3>
             <p class="note">{{ block.settings.text }}</p>
             <a class="button button--secondary" href="{{ block.settings.link }}">{{ block.settings.cta }}</a>
@@ -94,6 +95,7 @@
     <p><strong>Q:</strong> Tôi có thể dùng ảnh tự chụp không? <br><strong>A:</strong> Có, bạn có thể tải ảnh trong trang sản phẩm và mô tả yêu cầu.</p>
     <p><strong>Q:</strong> Bao lâu nhận phản hồi khả thi? <br><strong>A:</strong> Thường trong 4-24 giờ làm việc.</p>
     <p><strong>Q:</strong> Có chatbot AI chưa? <br><strong>A:</strong> Đã có chatbot demo if/else để test trải nghiệm, có thể nâng cấp lên app AI thật ở giai đoạn sau.</p>
+    <p><strong>Q:</strong> Có chatbot AI chưa? <br><strong>A:</strong> Vị trí đã sẵn sàng, sẽ tích hợp app chatbot ở giai đoạn tiếp theo.</p>
   </div>
 </section>
 {% schema %}
@@ -162,5 +164,9 @@
       ]
     }
   ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets":[{"name":"Home POD demo","blocks":[{"type":"category"},{"type":"category"},{"type":"category"},{"type":"category"}]}]
 }
 {% endschema %}

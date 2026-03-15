@@ -84,6 +84,14 @@
     });
   })();
 </script>
+<div class="chatbot-placeholder">
+  <div class="card" style="max-width:280px;">
+    <div class="badge">{{ section.settings.badge }}</div>
+    <h4 style="margin:8px 0 6px;">{{ section.settings.heading }}</h4>
+    <p class="note">{{ section.settings.text }}</p>
+    <a class="button button--primary" href="{{ section.settings.link }}">{{ section.settings.button }}</a>
+  </div>
+</div>
 {% endif %}
 {% schema %}
 {
@@ -94,6 +102,11 @@
     {"type":"text","id":"heading","label":"Tiêu đề", "default":"Trợ lý demo if/else"},
     {"type":"textarea","id":"text","label":"Mô tả", "default":"Chatbot thử nghiệm chạy trực tiếp trong theme với logic if/else cơ bản. Dùng để test nhanh UX trước khi gắn app AI."},
     {"type":"text","id":"button","label":"Nút", "default":"Mở chat demo"}
+    {"type":"text","id":"badge","label":"Nhãn", "default":"AI support ready"},
+    {"type":"text","id":"heading","label":"Tiêu đề", "default":"Cần gợi ý sản phẩm phù hợp?"},
+    {"type":"textarea","id":"text","label":"Mô tả", "default":"Điểm kết nối cho chatbot/app embed trong tương lai. Hiện tại bạn có thể nhắn đội ngũ tư vấn thủ công."},
+    {"type":"url","id":"link","label":"Link hỗ trợ"},
+    {"type":"text","id":"button","label":"Nút", "default":"Mở hỗ trợ"}
   ]
 }
 {% endschema %}
