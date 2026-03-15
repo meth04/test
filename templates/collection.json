@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-pod",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

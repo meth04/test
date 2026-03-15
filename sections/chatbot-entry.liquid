@@ -1,0 +1,99 @@
+{% if section.settings.show_chat_teaser %}
+<div class="chatbot-placeholder" data-chatbot-root>
+  <button class="button button--primary chatbot-launch" type="button" data-chatbot-toggle>
+    {{ section.settings.button }}
+  </button>
+
+  <div class="card chatbot-panel" data-chatbot-panel hidden>
+    <div class="h-row" style="align-items:flex-start;">
+      <div>
+        <div class="badge">{{ section.settings.badge }}</div>
+        <h4 style="margin:8px 0 6px;">{{ section.settings.heading }}</h4>
+      </div>
+      <button type="button" class="chatbot-close" data-chatbot-close>×</button>
+    </div>
+
+    <p class="note">{{ section.settings.text }}</p>
+
+    <div class="chatbot-log" data-chatbot-log>
+      <div class="chat-msg bot">Xin chào 👋 Mình là trợ lý demo. Bạn có thể hỏi: <em>giá</em>, <em>thời gian</em>, <em>upload</em>, <em>liên hệ</em>.</div>
+    </div>
+
+    <form class="chatbot-form" data-chatbot-form>
+      <input type="text" data-chatbot-input placeholder="Nhập câu hỏi để test if/else..." aria-label="Tin nhắn chatbot">
+      <button type="submit" class="button button--secondary">Gửi</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.querySelector('[data-chatbot-root]');
+    if (!root) return;
+
+    var panel = root.querySelector('[data-chatbot-panel]');
+    var toggleBtn = root.querySelector('[data-chatbot-toggle]');
+    var closeBtn = root.querySelector('[data-chatbot-close]');
+    var form = root.querySelector('[data-chatbot-form]');
+    var input = root.querySelector('[data-chatbot-input]');
+    var log = root.querySelector('[data-chatbot-log]');
+
+    function appendMessage(content, role) {
+      var message = document.createElement('div');
+      message.className = 'chat-msg ' + role;
+      message.textContent = content;
+      log.appendChild(message);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function getReply(text) {
+      var q = text.toLowerCase();
+
+      if (q.includes('giá') || q.includes('bao nhiêu') || q.includes('chi phí')) {
+        return 'Giá demo tuỳ sản phẩm và độ phức tạp thiết kế. Bạn gửi ảnh + yêu cầu để đội ngũ báo giá chi tiết trong 4–24h.';
+      } else if (q.includes('thời gian') || q.includes('bao lâu') || q.includes('giao hàng')) {
+        return 'Thông thường: duyệt yêu cầu 4–24h, sản xuất 3–7 ngày, giao hàng 2–5 ngày tuỳ khu vực.';
+      } else if (q.includes('upload') || q.includes('tải ảnh') || q.includes('ảnh')) {
+        return 'Bạn vào trang sản phẩm, điền Link ảnh tham chiếu và mô tả yêu cầu. Bản production có thể tích hợp app upload file trực tiếp.';
+      } else if (q.includes('liên hệ') || q.includes('hỗ trợ') || q.includes('zalo')) {
+        return 'Bạn có thể liên hệ qua email support@luamay.demo hoặc Zalo @luamay để được tư vấn nhanh.';
+      } else if (q.includes('chatbot') || q.includes('ai')) {
+        return 'Đây là chatbot test if/else trong theme. Bước tiếp theo là gắn app embed + backend để có AI hội thoại thực.';
+      }
+
+      return 'Mình chưa hiểu câu này trong bản demo 😄 Hãy thử từ khoá: giá, thời gian, upload, liên hệ, AI.';
+    }
+
+    toggleBtn.addEventListener('click', function () {
+      panel.hidden = false;
+      input.focus();
+    });
+
+    closeBtn.addEventListener('click', function () {
+      panel.hidden = true;
+    });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var text = input.value.trim();
+      if (!text) return;
+      appendMessage(text, 'user');
+      appendMessage(getReply(text), 'bot');
+      input.value = '';
+      input.focus();
+    });
+  })();
+</script>
+{% endif %}
+{% schema %}
+{
+  "name":"Chatbot entry",
+  "settings":[
+    {"type":"checkbox","id":"show_chat_teaser","label":"Hiển thị teaser", "default": true},
+    {"type":"text","id":"badge","label":"Nhãn", "default":"Chatbot test mode"},
+    {"type":"text","id":"heading","label":"Tiêu đề", "default":"Trợ lý demo if/else"},
+    {"type":"textarea","id":"text","label":"Mô tả", "default":"Chatbot thử nghiệm chạy trực tiếp trong theme với logic if/else cơ bản. Dùng để test nhanh UX trước khi gắn app AI."},
+    {"type":"text","id":"button","label":"Nút", "default":"Mở chat demo"}
+  ]
+}
+{% endschema %}

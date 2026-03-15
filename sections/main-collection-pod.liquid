@@ -1,0 +1,46 @@
+<section class="section">
+  <div class="page-width">
+    <div class="h-row" style="margin-bottom:14px;">
+      <div><h1 style="margin:0;">{{ collection.title }}</h1><p class="note">{{ collection.description | strip_html | truncate: 120 }}</p></div>
+      <div class="h-row">
+        <select><option>Sắp xếp: Mới nhất</option><option>Giá tăng dần</option><option>Giá giảm dần</option></select>
+      </div>
+    </div>
+    <div class="grid grid--3">
+      {% for product in collection.products %}
+      <article class="card">
+        <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+        <p class="note">{{ product.description | strip_html | truncate: 95 }}</p>
+        <p><strong>{{ product.price | money }}</strong></p>
+        <a class="button button--secondary" href="{{ product.url }}">Tuỳ chỉnh ngay</a>
+      </article>
+      {% else %}
+      <article class="card">
+        <div class="badge">Sản phẩm mẫu</div>
+        <h3>Áo hoodie in chân dung</h3>
+        <p class="note">Demo item khi collection chưa có dữ liệu thực tế.</p>
+        <p><strong>Từ 489.000₫</strong></p>
+      </article>
+      <article class="card">
+        <div class="badge">Sản phẩm mẫu</div>
+        <h3>Ốp điện thoại in ảnh pet</h3>
+        <p class="note">Gợi ý sản phẩm theo nhóm quà tặng cá nhân hoá.</p>
+        <p><strong>Từ 189.000₫</strong></p>
+      </article>
+      <article class="card">
+        <div class="badge">Sản phẩm mẫu</div>
+        <h3>Bình giữ nhiệt in tên</h3>
+        <p class="note">Phù hợp chiến dịch gifting cho doanh nghiệp.</p>
+        <p><strong>Từ 259.000₫</strong></p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name":"Main collection POD",
+  "settings":[],
+  "presets":[{"name":"Main collection POD"}]
+}
+{% endschema %}
