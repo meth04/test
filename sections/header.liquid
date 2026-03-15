@@ -1,0 +1,25 @@
+<header class="section" style="padding:16px 0;">
+  <div class="page-width h-row">
+    <a href="/" style="font-weight:800;font-size:22px;">{{ section.settings.brand_name }}</a>
+    <nav class="h-row" style="gap:18px;">
+      <a href="/collections/all">Sản phẩm</a>
+      <a href="{{ section.settings.process_link }}">Quy trình</a>
+      <a href="{{ section.settings.contact_link }}">Hỗ trợ</a>
+    </nav>
+    <div class="h-row" style="gap:10px;">
+      <button class="button button--secondary" type="button">{{ section.settings.locale_label }}</button>
+      <a class="button button--primary" href="/cart">Giỏ hàng</a>
+    </div>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {"type":"text","id":"brand_name","label":"Tên thương hiệu","default":"LụaMây Studio"},
+    {"type":"url","id":"process_link","label":"Link quy trình"},
+    {"type":"url","id":"contact_link","label":"Link hỗ trợ"},
+    {"type":"text","id":"locale_label","label":"Nút ngôn ngữ/quốc gia","default":"VN | Tiếng Việt"}
+  ]
+}
+{% endschema %}
